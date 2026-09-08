@@ -1,0 +1,67 @@
+<!-- formatting comes from Prettier extension to make our code look nice -->
+<!-- right click document -> Format Document -->
+<!-- option + shift + F to format -->
+
+<!-- body holds all of the content on our webpage -->
+<!-- save the file -> refresh the browser -> see the result -->
+<!-- h1: classifies the text as "header" -->
+<!-- p:normal paragraph, looks same as untagged text, automatically into a new line -->
+<!-- em: italics, can  -->
+<!-- strong: bold, but no need of <p> -->
+<!-- em & strong are in line tags, do not go into a new line-->
+<!-- block elements (<p>, <h1>): stacked/arranged vertically, no content next to it -->
+<!-- inline elements (<em>, <strong>): stacked/arranged horizontally, content are next to each other -->
+<!-- in html, order matters -->
+<!-- attributes are always in the end arrow -->
+<html>
+  <head>
+    <title>class 2 💰</title>
+  </head>
+  <body>
+    this is some text on my webpage this text here is untagged, nonspecific text
+    <!-- these are block elements -->
+    <h1>HEADER</h1>
+    <p>this is a normal paragraph</p>
+    <p>this has <em>italics</em></p>
+    <!-- these are inline elements -->
+    <strong>this is bolded, but no <\p></strong>
+    <em>this is an entire italic sentence</em>
+    <code></code>
+    <!-- generic type of element -->
+    <div>
+      <!-- dividing element -->
+      <!-- usually used as a layer or to group content -->
+      <p>this paragraph is in a div</p>
+      <p>these paragraphs are all in a group together</p>
+    </div>
+    <!-- this tag does not have any content, add a horizontal line -->
+    <hr />
+    <!-- displayed horizontally, often used doing sth specific to a word in the line -->
+    <span>hi</span>
+    <span>hello</span>
+    <span>greetings</span>
+    <p>maybe in the future, this <span>word</span> will be red</p>
+
+    <img src="images/images.jpg" />
+    <!-- for image display -->
+    <!-- If image in a folder, need to make the website to look inside the folder to find the image -->
+    <!-- in the attribute value, use the name of the file, including capitalization -->
+    <!-- usually resize our images outside of code, use whatever external tool to resize your files -->
+    <!-- we can also use URLs from a image hosted somewhere else on the web -->
+    <img
+      src="https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=1108&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <a href="page2.html">go to <em>page 2</em></a>
+
+    <!-- we can put images inside a link -->
+    <a href="page2.html">
+      <img src="images/images.jpg" />
+    </a>
+    <!-- br: break, make sth into a new line, could be as many as u want -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+</html>
