@@ -1,0 +1,135 @@
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+}
+.centered {
+    width: 800px;
+    margin: auto;
+    line-height: 2;
+    text-align: center;
+}
+.right_aligned{
+    text-align: right;
+}
+
+h3,h4 {
+    font-family: Georgia, serif;
+}
+p,span,a {
+    font-family: "Trebuchet MS", sans-serif;
+}
+.middle{
+    display: block;
+    margin: auto;
+}
+.top_img{
+    width: 100vw;
+    height: auto;
+}
+.back{
+    margin-right: 200px;
+}
+.photos{
+    width:300px;
+    height: auto;
+}
+.pom_inbag{
+    margin-left: 300px;
+}
+.camera_inbag {
+    margin-left: 300px;
+}
+.airpods_inbag {
+    margin-left: 500px; 
+    margin-top: 700px;
+}
+
+.keys_inbag {
+    margin-left: 300px; 
+    margin-top: 700px;
+}
+
+.pom_word {
+    margin-left: 300px;
+}
+
+.camera_word {
+    margin-left: 500px;
+}
+
+.airpods_word {
+    margin-left: 550px;
+    margin-top: 700px;
+}
+
+.keys_word {
+    margin-left: 1050px;
+    margin-top: 700px;
+}
+
+.bag {
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+.hellokitty_green {
+    margin-left: 350px
+}
+
+.hellokitty_pink {
+    margin-left: 400px
+}
+
+.pompompurin_pink {
+    margin-left: 350px
+}
+
+.pompompurin_yellow {
+    margin-left: 400px
+    
+}
+
+.labubu {
+    margin-left: 400px
+}
+
+.duffy {
+    margin-left: 350px
+}
+
+.hover-text {
+    display: none;
+    width: 250px;
+
+}
+
+.hellokitty_green:hover .hover-text {
+    display: block;
+    margin-left: 350px;
+}
+
+.hellokitty_pink:hover .hover-text {
+    display: block;
+    margin-left: 950px;
+
+}
+
+.pompompurin_pink:hover .hover-text {
+    display: block;
+    margin-left: 350px;
+}
+
+.pompompurin_yellow:hover .hover-text {
+    display: block;
+    margin-left: 950px;
+}
+
+.labubu:hover .hover-text {
+    display: block;
+    margin-left: 950px;
+}
+
+.duffy:hover .hover-text {
+    display: block;
+    margin-left: 350px;
+}
