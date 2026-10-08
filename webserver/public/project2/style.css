@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+#room {
+    position: relative;
+    width: max(100vw, calc(100vh * 16 / 9));
+    height: max(100vh, calc(100vw * 9 / 16));
+}
+.bg img{
+    position: absolute;
+    z-index: -999;
+    width: 100%;
+    height: 100%;
+}
+.cat {
+    position: absolute;
+    width: 15%;
+    bottom: 20%;
+}
+#night-switch {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 90px;
+    height: 40px;
+    background: #d9dde5;
+    border: none;
+    border-radius: 25px;
+}
+#night-switch #knob {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 50px;
+    height: 50px;
+    background: #f39a2e;
+    border-radius: 25px;
+}
+#night-switch.on {
+    background: #2c3360;
+}
+#night-switch.on #knob {
+    left: 50px;
+    background: #4f6bd8;
+}
+#bg-night{
+    opacity: 0;
+    transition: opacity 2s;
+}
+#bg-night.show{
+    opacity: 1;
+}
