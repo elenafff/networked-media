@@ -1,0 +1,6 @@
+npm init -y --- created json
+npm install express nunjucks --- adding nunjucks package
+node --watch server.js
+
+You could also watch the .njk files for changes as well, because they sometimes need a refresh:
+node --watch --watch-path=views server.js

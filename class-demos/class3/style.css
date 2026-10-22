@@ -1,5 +1,6 @@
 /* selector = the thing we are grabbing on our page */
 /* Naming rule in CSS: use "-" in phrases between words */
+/* Most values dont need quotation marks "" */
 body{
     background-color:yellow;
 }
