@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>Quiz</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    {% include "navigation.njk" %}
+    <form class="quiz-text" method="POST" action="/submit-quiz">
+        <label>
+            <b class="typed-question">What's your name?</b>
+            <input class="type-box" type="text" placeholder="Name" name="name">
+        </label>
+
+        <div class="question">
+            <b>Q1: It's the night before a big deadline. You're...</b>
+            <label class="option">
+                <input type="radio" name="q1" value="A"> Checking your work again for the fifth time
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="B" /> Finished it early and already in bed
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="C" /> Playing music and making it fun
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="D" /> Annoyed someone gave you this much work
+            </label>
+        </div>
+
+        <div class="question">
+            <b>Q2: A friend hasn't replied in a few hours. You...</b>
+            <label class="option">
+                <input type="radio" name="q2" value="A"> Reread your last message to see if you said something wrong
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="B" /> Don't really notice
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="C" /> Send them multiple funny memes to make them reply
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="D" /> Feel ignored and a little irritated
+            </label>
+        </div>
+
+        <div class="question">
+            <b>Q3: Your ideal Friday night is...</b>
+            <label class="option">
+                <input type="radio" name="q3" value="A"> Lying on your bed thinking about life
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="B" /> A quiet walk in a park
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="C" /> Out with friends somewhere loud
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="D" /> Anywhere without slow walkers and crowds
+            </label>
+        </div>
+
+        <div class="question">
+            <b>Q4: Plans get cancelled at the last minute. You think...</b>
+            <label class="option">
+                <input type="radio" name="q4" value="A"> "Was it because of me?"
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="B" /> "Okay, more time to rest."
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="C" /> "Let's find something else fun to do!"
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="D" /> "Why didn't they tell me earlier?"
+            </label>
+        </div>
+
+        <div class="question">
+            <b>Q5: Your friends would most likely describe you as...</b>
+            <label class="option">
+                <input type="radio" name="q5" value="A"> The one who always has a backup plan
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="B" /> The one who never panics
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="C" /> The one who makes everyone laugh
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="D" /> The one who speaks up when disagreeing with something
+            </label>
+        </div>
+
+        <label>
+            <b class="typed-question">Say something before moving in. </b>
+            <input class="type-box" type="text" placeholder="Say something..." name="message">
+        </label>
+        <input class="submit-button" type="submit" value="Move In">
+    </form>
+</body>
+
+</html>

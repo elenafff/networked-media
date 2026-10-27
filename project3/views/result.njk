@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>Result</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    {% include "navigation.njk" %}
+    <div class="result">
+        <h1>Welcome to town, {{ newResident.name }}!</h1>
+        <p>You're <strong>{{ newResident.emotion }}</strong>.</p>
+        <img src="/images/{{ newResident.emotion }}.PNG" alt="{{ newResident.emotion }}" />
+        <br>
+        <a href="/townmap" class="result-button">Enter</a>
+    </div>
+
+
+
+</body>
+
+</html>

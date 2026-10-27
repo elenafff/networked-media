@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Town Map</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    {% include "navigation.njk" %}
+    {# Map locations #}
+    <div class="map">
+
+        {# Anxiety stays in conveninece store #}
+        <a href="/townmap/convenience-store" class="convenience-store">
+            <img src="/images/convenience_store.PNG" class="building" />
+            <div class="residents">
+                <span class="ball-anxiety">
+                </span>
+                <span class="count"> ⨉ {{ anxietyCount }}</span>
+            </div>
+        </a>
+
+        {# Calm stays by the river #}
+        <a href="/townmap/river" class="river">
+            <img src="/images/river.PNG" class="building" />
+            <div class="residents">
+                <span class="ball-calm">
+                </span>
+                <span class="count"> ⨉ {{ calmCount }}</span>
+            </div>
+        </a>
+
+        {# Joy stays in the theme park #}
+        <a href="/townmap/theme-park" class="theme-park">
+            <img src="/images/theme_park.PNG" class="building" />
+            <div class="residents">
+                <span class="ball-joy">
+                </span>
+                <span class="count"> ⨉ {{ joyCount }}</span>
+            </div>
+        </a>
+
+        {# Anger stays in the tower #}
+        <a href="/townmap/tower" class="tower">
+            <img src="/images/tower.PNG" class="building" />
+            <div class="residents">
+                <span class="ball-anger">
+                </span>
+                <span class="count"> ⨉ {{ angerCount }}</span>
+            </div>
+        </a>
+
+    </div>
+</body>
+
+</html>
