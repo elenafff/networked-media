@@ -1,3 +1,4 @@
+// setting varaible express/nunjucks for the packages
 const express = require("express");
 const nunjucks = require("nunjucks");
 
@@ -16,20 +17,22 @@ app.set("view engine", "njk");
 
 let residents = [];
 
+// render home page
 app.get("/", (request, response) => {
   // regular homepage rendering
   response.render("home.njk");
 });
-
+// render quiz page
 app.get("/quiz", (request, response) => {
   response.render("quiz.njk");
 });
-
+// render characters page
 app.get("/characters", (request, response) => {
   response.render("characters.njk");
 });
-
+// render town map page
 app.get("/townmap", (request, response) => {
+  // setting counter variables to count number of emotions added
   let anxietyCount = 0;
   let calmCount = 0;
   let joyCount = 0;
@@ -50,11 +53,11 @@ app.get("/townmap", (request, response) => {
     angerCount: angerCount,
   });
 });
-
+// render town rules page
 app.get("/townrules", (request, response) => {
   response.render("townrules.njk");
 });
-
+// sending result of submit quiz
 app.post("/submit-quiz", (request, response) => {
   let answers = [
     request.body.q1,
@@ -63,7 +66,7 @@ app.post("/submit-quiz", (request, response) => {
     request.body.q4,
     request.body.q5,
   ];
-
+  // counting number of times each choices selected
   let countA = 0;
   let countB = 0;
   let countC = 0;
@@ -75,6 +78,7 @@ app.post("/submit-quiz", (request, response) => {
     if (singleAnswer === "C") countC++;
     if (singleAnswer === "D") countD++;
   }
+  // setting current emotion as anxiety, and comparing the countB, C, D with countA to change currentEmotion
   let currentEmotion = "anxiety";
   let highestCount = countA;
 
@@ -95,8 +99,9 @@ app.post("/submit-quiz", (request, response) => {
   residents.push(request.body);
   response.render("result.njk", { newResident: request.body });
 });
-
+// render location pages
 app.get("/townmap/convenience-store", (request, response) => {
+  // setting counter variable for header that includes the number of residents living in the place
   let count = 0;
   for (let resident of residents) {
     if (resident.emotion == "anxiety") count++;
@@ -106,7 +111,7 @@ app.get("/townmap/convenience-store", (request, response) => {
     count: count,
   });
 });
-
+// same as convenience store
 app.get("/townmap/river", (request, response) => {
   let count = 0;
   for (let resident of residents) {

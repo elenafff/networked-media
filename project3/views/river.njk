@@ -6,14 +6,16 @@
 </head>
 
 <body>
+    {# nav bar #}
     {% include "navigation.njk" %}
+    {# top header of river #}
     <div class="location-intro">
         <img src="/images/river.PNG" class="location-image" />
         <h1>River</h1>
         <p class="location-text">Water is clean here. Residents love sitting on the bank and doing their own things.</p>
         <span class="location-count">{{ count }} residents live here</span>
     </div>
-
+    {# resident card setting of river (calm) #}
     <div class="location-residents">
         {% for r in allResidents %}
         {% if r.emotion == "calm" %}

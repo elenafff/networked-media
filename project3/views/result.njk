@@ -6,10 +6,14 @@
 </head>
 
 <body>
+    {# nav bar #}
     {% include "navigation.njk" %}
     <div class="result">
+        {# getting name from the test result #}
         <h1>Welcome to town, {{ newResident.name }}!</h1>
+        {# emotion type #}
         <p>You're <strong>{{ newResident.emotion }}</strong>.</p>
+        {# emotion image #}
         <img src="/images/{{ newResident.emotion }}.PNG" alt="{{ newResident.emotion }}" />
         <br>
         <a href="/townmap" class="result-button">Enter</a>

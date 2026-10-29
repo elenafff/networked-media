@@ -6,7 +6,9 @@
 </head>
 
 <body>
+    {# nav bar #}
     {% include "navigation.njk" %}
+    {# top header of convenience store page #}
     <div class="location-intro">
         <img src="/images/convenience_store.PNG" class="location-image" />
         <h1>Convenience Store</h1>
@@ -14,7 +16,7 @@
             of their lives till morning.</p>
         <span class="location-count">{{ count }} residents live here</span>
     </div>
-
+    {# resident card settings of convenience store (anxiety) #}
     <div class="location-residents">
         {% for r in allResidents %}
         {% if r.emotion == "anxiety" %}

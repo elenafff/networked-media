@@ -6,14 +6,16 @@
 </head>
 
 <body>
+    {# nav bar #}
     {% include "navigation.njk" %}
+    {# top header of tower #}
     <div class="location-intro">
         <img src="/images/tower.PNG" class="location-image" />
         <h1>Tower</h1>
         <p class="location-text"> So tall that residents here can scream out their emotions and no one can hear it.</p>
         <span class="location-count">{{ count }} residents live here</span>
     </div>
-
+    {# resident card setting of tower (anger) #}
     <div class="location-residents">
         {% for r in allResidents %}
         {% if r.emotion == "anger" %}

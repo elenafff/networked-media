@@ -6,14 +6,16 @@
 </head>
 
 <body>
+    {# nav bar #}
     {% include "navigation.njk" %}
+    {# top header of theme park #}
     <div class="location-intro">
         <img src="/images/theme_park.PNG" class="location-image" />
         <h1>Theme Park</h1>
         <p class="location-text">Lots of rides here and laughters all around every corner.</p>
         <span class="location-count">{{ count }} residents live here</span>
     </div>
-
+    {# resident card setting for theme park (joy) #}
     <div class="location-residents">
         {% for r in allResidents %}
         {% if r.emotion == "joy" %}

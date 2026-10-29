@@ -6,13 +6,16 @@
 </head>
 
 <body>
+    {# nav bar #}
     {% include "navigation.njk" %}
+    {# quiz #}
     <form class="quiz-text" method="POST" action="/submit-quiz">
         <label>
+            {# asking name #}
             <b class="typed-question">What's your name?</b>
             <input class="type-box" type="text" placeholder="Name" name="name">
         </label>
-
+        {# Q1 #}
         <div class="question">
             <b>Q1: It's the night before a big deadline. You're...</b>
             <label class="option">
@@ -31,7 +34,7 @@
                 <input type="radio" name="q1" value="D" /> Annoyed someone gave you this much work
             </label>
         </div>
-
+        {# Q2 #}
         <div class="question">
             <b>Q2: A friend hasn't replied in a few hours. You...</b>
             <label class="option">
@@ -50,7 +53,7 @@
                 <input type="radio" name="q2" value="D" /> Feel ignored and a little irritated
             </label>
         </div>
-
+        {# Q3 #}
         <div class="question">
             <b>Q3: Your ideal Friday night is...</b>
             <label class="option">
@@ -69,7 +72,7 @@
                 <input type="radio" name="q3" value="D" /> Anywhere without slow walkers and crowds
             </label>
         </div>
-
+        {# Q4 #}
         <div class="question">
             <b>Q4: Plans get cancelled at the last minute. You think...</b>
             <label class="option">
@@ -88,7 +91,7 @@
                 <input type="radio" name="q4" value="D" /> "Why didn't they tell me earlier?"
             </label>
         </div>
-
+        {# Q5 #}
         <div class="question">
             <b>Q5: Your friends would most likely describe you as...</b>
             <label class="option">
@@ -107,11 +110,12 @@
                 <input type="radio" name="q5" value="D" /> The one who speaks up when disagreeing with something
             </label>
         </div>
-
+        {# asking message #}
         <label>
             <b class="typed-question">Say something before moving in. </b>
             <input class="type-box" type="text" placeholder="Say something..." name="message">
         </label>
+        {# submit button #}
         <input class="submit-button" type="submit" value="Move In">
     </form>
 </body>

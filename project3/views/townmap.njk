@@ -6,17 +6,20 @@
 </head>
 
 <body>
+    {# nav bar #}
     {% include "navigation.njk" %}
     {# Map locations #}
     <div class="map">
-
+        {# background image #}
         <img src="/images/background.PNG" class="back" />
         {# Anxiety stays in conveninece store #}
         <a href="/townmap/convenience-store" class="convenience-store">
             <img src="/images/convenience_store.PNG" class="building" />
             <div class="residents">
+                {# ball representing the anxiety (purple) #}
                 <span class="ball-anxiety">
                 </span>
+                {# getting anxietyCount from the server #}
                 <span class="count"> ⨉ {{ anxietyCount }}</span>
             </div>
         </a>
@@ -25,8 +28,10 @@
         <a href="/townmap/river" class="river">
             <img src="/images/river.PNG" class="building" />
             <div class="residents">
+                {# ball representing the calm (green)) #}
                 <span class="ball-calm">
                 </span>
+                {# getting calmCount from the server #}
                 <span class="count"> ⨉ {{ calmCount }}</span>
             </div>
         </a>
@@ -35,8 +40,10 @@
         <a href="/townmap/theme-park" class="theme-park">
             <img src="/images/theme_park.PNG" class="building" />
             <div class="residents">
+                {# ball representing the joy (yellow)) #}
                 <span class="ball-joy">
                 </span>
+                {# getting joyCount from the server #}
                 <span class="count"> ⨉ {{ joyCount }}</span>
             </div>
         </a>
@@ -45,8 +52,10 @@
         <a href="/townmap/tower" class="tower">
             <img src="/images/tower.PNG" class="building" />
             <div class="residents">
+                {# ball representing the joy (red)) #}
                 <span class="ball-anger">
                 </span>
+                {# getting angerCount from the server #}
                 <span class="count"> ⨉ {{ angerCount }}</span>
             </div>
         </a>
