@@ -130,46 +130,48 @@ h1{
     color: #141836;
     font-size: 16px;
 }
-/* town map page */
-.map{
+/* town map page */ 
+.map {
     position: relative;
     top: 20px;
 }
-.back{
-    width: 100%;
-    position: absolute;
-}
-.building{
+
+.back {
     width: 100%;
     display: block;
 }
-/* locations */
+
+.building {
+    width: 100%;
+    display: block;
+}
+
 .convenience-store {
     position: absolute;
-    top: 145px;
-    left: 50px;
-    width: 500px;
+    left: 3.35%;
+    top: 13.97%;
+    width: 33.47%;
 }
 
 .river {
     position: absolute;
-    top: 530px;
-    left: 942px;
-    width: 520px;
+    left: 63.05%;
+    top: 51.06%;
+    width: 34.81%;
 }
 
 .theme-park {
     position: absolute;
-    top: 510px;
-    left: 300px;
-    width: 520px;
+    left: 20.08%;
+    top: 49.13%;
+    width: 34.81%;
 }
 
 .tower {
     position: absolute;
-    top: 15px;
-    left: 868px;
-    width: 325px;
+    left: 58.1%;
+    top: 1.45%;
+    width: 21.75%;
 }
 /* rectangular shape next to locations */
 .residents{
