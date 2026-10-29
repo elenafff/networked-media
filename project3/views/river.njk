@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>River</title>
+    <link href="/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    {% include "navigation.njk" %}
+    <div class="location-intro">
+        <img src="/images/river.PNG" class="location-image" />
+        <h1>River</h1>
+        <p class="location-text">Water is clean here. Residents love sitting on the bank and doing their own things.</p>
+        <span class="location-count">{{ count }} residents live here</span>
+    </div>
+
+    <div class="location-residents">
+        {% for r in allResidents %}
+        {% if r.emotion == "calm" %}
+        <div class="resident-card">
+            <img src="/images/calm.PNG" />
+            <p class="resident-name">{{ r.name }}</p>
+            <p class="resident-message">"{{ r.message }}"</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Theme Park</title>
+    <link href="/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    {% include "navigation.njk" %}
+    <div class="location-intro">
+        <img src="/images/theme_park.PNG" class="location-image" />
+        <h1>Theme Park</h1>
+        <p class="location-text">Lots of rides here and laughters all around every corner.</p>
+        <span class="location-count">{{ count }} residents live here</span>
+    </div>
+
+    <div class="location-residents">
+        {% for r in allResidents %}
+        {% if r.emotion == "joy" %}
+        <div class="resident-card">
+            <img src="/images/joy.PNG" />
+            <p class="resident-name">{{ r.name }}</p>
+            <p class="resident-message">"{{ r.message }}"</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</body>
+
+</html>

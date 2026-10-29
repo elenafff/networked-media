@@ -95,8 +95,40 @@ app.post("/submit-quiz", (request, response) => {
   residents.push(request.body);
   response.render("result.njk", { newResident: request.body });
 });
+
 app.get("/townmap/convenience-store", (request, response) => {
-  response.render("convenience-store.njk");
+  let count = 0;
+  for (let resident of residents) {
+    if (resident.emotion == "anxiety") count++;
+  }
+  response.render("convenience-store.njk", {
+    allResidents: residents,
+    count: count,
+  });
+});
+
+app.get("/townmap/river", (request, response) => {
+  let count = 0;
+  for (let resident of residents) {
+    if (resident.emotion == "calm") count++;
+  }
+  response.render("river.njk", { allResidents: residents, count: count });
+});
+
+app.get("/townmap/theme-park", (request, response) => {
+  let count = 0;
+  for (let resident of residents) {
+    if (resident.emotion == "joy") count++;
+  }
+  response.render("theme-park.njk", { allResidents: residents, count: count });
+});
+
+app.get("/townmap/tower", (request, response) => {
+  let count = 0;
+  for (let resident of residents) {
+    if (resident.emotion == "anger") count++;
+  }
+  response.render("tower.njk", { allResidents: residents, count: count });
 });
 
 app.listen(8080, () => {

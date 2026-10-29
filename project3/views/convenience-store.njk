@@ -1,3 +1,31 @@
 <html>
 
+<head>
+    <title>Convenience Store</title>
+    <link href="/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    {% include "navigation.njk" %}
+    <div class="location-intro">
+        <img src="/images/convenience_store.PNG" class="location-image" />
+        <h1>Convenience Store</h1>
+        <p class="location-text">The lights never go off here. Residents who can't sleep come in for snacks and thinking
+            of their lives till morning.</p>
+        <span class="location-count">{{ count }} residents live here</span>
+    </div>
+
+    <div class="location-residents">
+        {% for r in allResidents %}
+        {% if r.emotion == "anxiety" %}
+        <div class="resident-card">
+            <img src="/images/anxiety.PNG" />
+            <p class="resident-name">{{ r.name }}</p>
+            <p class="resident-message">"{{ r.message }}"</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</body>
+
 </html>
