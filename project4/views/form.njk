@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Social Excuses Archive</title>
+    {# optionally style form #}
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="left"></section>
+    <form method="POST" action="/add-data">
+        {# q1 #}
+        <input type="text" name="excuse" placeholder="What you said" required>
+        {# q2 #}
+        <input type="text" name="truth" placeholder="What actually happened" required>
+        {# q3 #}
+        <input type="text" name="occasion" placeholder="The occasion you escaped" required>
+        {# q4 and choices #}
+        <p>Did they believe you?</p>
+        <div class="option">
+            <input type="radio" name="believed" value="yes" required> Yes
+        </div>
+        <div class="option">
+            <input type="radio" name="believed" value="no"> No
+        </div>
+        <div class="option">
+            <input type="radio" name="believed" value="unknown"> Unknown
+        </div>
+
+        <input type="submit" value="send data">
+
+    </form>
+    <section class="right"></section>
+</body>
+
+</html>
